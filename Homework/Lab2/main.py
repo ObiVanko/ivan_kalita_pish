@@ -15,22 +15,22 @@ def nod(a, b):
             b = b % a
     return a + b
 
-def AmountDigits(x: int):
+def amount_digits(x: int):
     answer = 0
     while x > 0:
         answer += x % 10
         x = x // 10
     return answer
 
-def ProductDigits(x: int):
+def product_digits(x: int):
     answer = 1
     while x > 0:
         answer *= x % 10
         x = x // 10
     return answer
 
-def AmountEqualProductDigits(x: int):
-    if AmountDigits(x) == ProductDigits(x):
+def amount_equal_product_digits(x: int):
+    if amount_digits(x) == product_digits(x):
         return True
     else:
         return False
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     print(nod(input_x, input_y))
     print("Сумма цифр введённого числа.")
     input_x = int(input("Введите число: "))
-    print(AmountDigits(input_x))
+    print(amount_digits(input_x))
     print("Проверка равна ли сумма цифр числа их произведению.")
     input_x = int(input("Введите число: "))
-    print(AmountEqualProductDigits(input_x))
+    print(amount_equal_product_digits(input_x))
